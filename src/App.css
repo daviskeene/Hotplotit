@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color: var(--main-color);
+  position: absolute;
+  min-height: 9vh;
+  padding: 3vh 0;
+  bottom: 0;
+}
+
+footer a {
+  display: block;
+  margin: 5px 0;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+footer h5 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--light-color);
+}
+
+footer p {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+footer span.lastlines {
+  color: var(--light-color)
+}
