@@ -67,8 +67,8 @@ const NavLinks = styled(animated.ul)`
     text-decoration: none;
     cursor: pointer;
     &:hover {
-      color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
+      color: #BD3381;
+      border-bottom: 1px solid #BD3381;
     }
     @media (max-width: 768px) {
       display: none;
