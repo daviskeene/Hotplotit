@@ -70,7 +70,7 @@ addIdea(event) {
               </AlertWrapper>
 
               <CreateButton>
-              <a href="create" class="btn" onClick={() => this.saveIdeas()}><span>Continue</span></a>
+              <a href="create2" class="btn" onClick={() => this.saveIdeas()}><span>Continue</span></a>
               </CreateButton>
           </div>
       )

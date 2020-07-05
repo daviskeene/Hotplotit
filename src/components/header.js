@@ -16,7 +16,7 @@ const Navbar = (props) => {
   });
 
   return (
-    <>
+    <span>
       <NavBar style={barAnimation}>
         <FlexContainer>
           <NavLinks style={linkAnimation}>
@@ -27,7 +27,7 @@ const Navbar = (props) => {
           </NavLinks>
         </FlexContainer>
       </NavBar>
-   </>
+    </span>
   )
 }
 

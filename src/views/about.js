@@ -36,7 +36,7 @@ class About extends Component {
                 }, {
                     x: 10,
                     y: 7
-                }]} labels={["I'm not awesome or easy!", "I'm awesome, but not easy!", "I'm awesome and easy!"]}/>
+                }]} labels={["I'm not awesome or easy!", "I'm awesome, but not easy!", "I'm awesome and easy!"]} aspectRatio={1}/>
             </PlotWrapper>
                 
                 <Footer />

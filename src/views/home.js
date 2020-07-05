@@ -31,7 +31,7 @@ class Home extends Component {
     }
 }
 
-const Banner = styled.div`
+export const Banner = styled.div`
 & h1 {
     margin-top: 2.5em;
     width: 100%;

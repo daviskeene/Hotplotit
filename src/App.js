@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from "./views/home"
 import About from "./views/about"
 import CreateList from "./views/formView"
+import CreatePlot from "./views/createPlot"
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             )}/>
             <Route exact={true} path='/create' render={() => (
                 <CreateList />
+            )}/>
+            <Route exact={true} path='/create2' render={() => (
+                <CreatePlot />
             )}/>
           </Switch>
       

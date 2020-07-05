@@ -10,6 +10,14 @@ export default class HotPlot extends Component {
     chartRef = React.createRef();
 
     componentDidMount() {
+        this.buildChart();
+    }
+
+    componentDidUpdate() {
+        this.buildChart();
+    }
+
+    buildChart = () => {
         const myChartRef = this.chartRef.current.getContext("2d");
 
         const type = this.props.type;
@@ -24,11 +32,13 @@ export default class HotPlot extends Component {
         const backgroundColor = COLORS;
 
         const options = {
-                aspectRatio: 1,
+                beginAtZero: true,
+                aspectRatio: this.props.aspectRatio,
                 pointDot: true,
+                maintainAspectRatio: false,
                   plugins: {
                       datalabels: {
-                          display: false,
+                          display: true,
                           formatter: function(value, context) {
                             return context.chart.data.labels[context.dataIndex];
                         }
@@ -53,13 +63,21 @@ export default class HotPlot extends Component {
                     yAxes: [{ 
                       scaleLabel: {
                         display: true,
-                        labelString: "Awesomeness"
+                        labelString: "Awesomeness",
+                        ticks: {
+                            min: 0, // minimum value
+                            max: 10 // maximum value
+                        }
                       }
                     }],
                     xAxes: [{ 
                       scaleLabel: {
                         display: true,
-                        labelString: "Easiness"
+                        labelString: "Easiness",
+                        ticks: {
+                            min: 0, // minimum value
+                            max: 10 // maximum value
+                        }
                       }
                     }]
                   }
@@ -95,7 +113,8 @@ export default class HotPlot extends Component {
 HotPlot.propTypes = {
     labels: PropTypes.array,
     data: PropTypes.array,
-    type: PropTypes.string
+    type: PropTypes.string,
+    aspectRatio: PropTypes.number
 }
 
 var build_colors = function(start, end, n) {
