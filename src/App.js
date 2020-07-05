@@ -4,6 +4,7 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from "./views/home"
+import About from "./views/about"
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Switch>
             <Route exact={true} path='/' render={() => (
                 <Home />
+            )}/>
+            <Route exact={true} path='/about' render={() => (
+              <About />
             )}/>
           </Switch>
       

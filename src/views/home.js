@@ -16,7 +16,6 @@ class Home extends Component {
             <Container>
             <Header />
             </Container>
-
             <Banner>
                 <h1>Hotplotit </h1>
                 <h3>Organize your thoughts.</h3>
@@ -32,7 +31,7 @@ class Home extends Component {
     }
 }
 
-const Banner = styled.div`
+export const Banner = styled.div`
 & h1 {
     margin-top: 2.5em;
     width: 100%;
@@ -44,7 +43,7 @@ const Banner = styled.div`
 
 	background: linear-gradient(-45deg, #ff91af, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 
     @keyframes gradient {
         0% {
