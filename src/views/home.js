@@ -22,7 +22,7 @@ class Home extends Component {
                 <br></br>
             </Banner>
             <CreateButton>
-                <a href="#" class="btn"><span>Create A Hotplot!</span></a>
+                <a href="create" class="btn"><span>Get Started!</span></a>
             </CreateButton>
 
             <Footer />
@@ -31,7 +31,7 @@ class Home extends Component {
     }
 }
 
-export const Banner = styled.div`
+const Banner = styled.div`
 & h1 {
     margin-top: 2.5em;
     width: 100%;
@@ -66,13 +66,13 @@ export const Banner = styled.div`
 }
 `;
 
-const CreateButton = styled.div`
+export const CreateButton = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 
 width: 100%;
-height: 35vh;
+height: 30vh;
 
 .btn {
     border: none;
@@ -85,7 +85,7 @@ height: 35vh;
     position: relative;
     color: #fff;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 18px;
     background-color: #222;
     padding: 17px 60px;
     margin: 0 auto;

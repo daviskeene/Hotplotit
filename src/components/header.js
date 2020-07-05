@@ -11,7 +11,7 @@ const Navbar = (props) => {
   const linkAnimation = useSpring({
     from: { transform: 'translate3d(0, 30px, 0)', opacity: 0 },
     to: { transform: 'translate3d(0, 0, 0)', opacity: 1 },
-    delay: 800,
+    delay: 250,
     config: config.wobbly,
   });
 
@@ -22,8 +22,8 @@ const Navbar = (props) => {
           <NavLinks style={linkAnimation}>
             <a href="/">Home</a>
             <a href="about">About</a>
-            <a href="/">Create</a>
-            <a href="/">Jellyfish</a>
+            <a href="/create">Create</a>
+            <a href="https://jellyfish.co">Jellyfish</a>
           </NavLinks>
         </FlexContainer>
       </NavBar>
@@ -38,7 +38,7 @@ const NavBar = styled(animated.nav)`
   width: 100%;
   top: 0;
   left: 0;
-  background: #FFFFFF;
+  background: #fff;
   z-index: 1;
   font-size: 1.4rem;
 `;

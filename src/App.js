@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from "./views/home"
 import About from "./views/about"
+import CreateList from "./views/formView"
 
 function App() {
   return (
@@ -15,7 +15,10 @@ function App() {
                 <Home />
             )}/>
             <Route exact={true} path='/about' render={() => (
-              <About />
+                <About />
+            )}/>
+            <Route exact={true} path='/create' render={() => (
+                <CreateList />
             )}/>
           </Switch>
       

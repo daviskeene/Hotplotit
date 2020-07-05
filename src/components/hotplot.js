@@ -34,13 +34,35 @@ export default class HotPlot extends Component {
                         }
                       }
                   },
+                  tooltips: {
+                    callbacks: {
+                       label: function(tooltipItem, data) {
+                          var label = data.labels[tooltipItem.index];
+                          return label;
+                       }
+                    }
+                 },
                   legend: {
                       display: false
                   },
                   xAxes: [{
                     type: 'linear',
                     position: 'bottom',
-                }]
+                }],
+                scales: {
+                    yAxes: [{ 
+                      scaleLabel: {
+                        display: true,
+                        labelString: "Awesomeness"
+                      }
+                    }],
+                    xAxes: [{ 
+                      scaleLabel: {
+                        display: true,
+                        labelString: "Easiness"
+                      }
+                    }]
+                  }
               };
 
         new Chart(myChartRef, {
@@ -51,7 +73,9 @@ export default class HotPlot extends Component {
                 datasets: [
                     {
                         data: this.props.data,
-                        backgroundColor: backgroundColor
+                        backgroundColor: backgroundColor,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
                     }
                 ]
             },

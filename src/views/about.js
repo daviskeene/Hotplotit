@@ -28,15 +28,15 @@ class About extends Component {
             
             <PlotWrapper>
                 <HotPlot type={'example'} data={[{
-                    x: 0,
-                    y: 0
+                    x: 1,
+                    y: 2
                 }, {
                     x: 3,
                     y: 10
                 }, {
                     x: 10,
-                    y: 5
-                }]} labels={['bruh', 'bbruh', 'bbbruh']}/>
+                    y: 7
+                }]} labels={["I'm not awesome or easy!", "I'm awesome, but not easy!", "I'm awesome and easy!"]}/>
             </PlotWrapper>
                 
                 <Footer />
@@ -53,6 +53,7 @@ const Banner = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     font-family: "Archivo Black", sans-serif;
+}
 `
 
 const PlotWrapper = styled.div`
