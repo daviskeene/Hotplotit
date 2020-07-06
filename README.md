@@ -9,6 +9,9 @@ The framework itself is likely familiar to you. It’s based on a traditional pr
 2. Get a group together with representatives from any important areas relative the work being done.
 3. Rank each item in the list in terms of "awesomeness" and difficulty.
 
+The items are then ranked by their overall awesomeness and easiness. Items that are more awesome and easier are ranked before items that are harder or less awesome.
+From this, a list can be made detailing which items a team should prioritize.
+
 ## Usage
 
 With hotplotit, you can make hotplots with ease. Navigate through the homepage to find where you can create your list of items:
@@ -65,4 +68,4 @@ No applicable license yet.
 
 ## Acknowledgments
 
-Thank you to **Thomas Whitehead** for giving me the inspiration to make this web app.
+Thank you to **Thomas Whitehead** for introducing me to the concept of a HotPlot!
