@@ -18,8 +18,7 @@ class Home extends Component {
             </Container>
             <Banner>
                 <h1>Hotplotit </h1>
-                <h3>Organize your thoughts.</h3>
-                <br></br>
+                <h3>Prioritize your thoughts, and plot it like it's hot.</h3>
             </Banner>
             <CreateButton>
                 <a href="create" class="btn"><span>Get Started!</span></a>
@@ -87,9 +86,9 @@ height: 30vh;
     font-weight: 700;
     font-size: 18px;
     background-color: #222;
-    padding: 17px 60px;
+    padding: 20px 60px;
     margin: 0 auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
   }
   
   .btn span {

@@ -25,13 +25,14 @@ constructor(props) {
 
 addIdea(event) {
       event.preventDefault();
-      const idea = document.getElementById('new-idea').value
+      const idea = document.getElementById('new-idea').value;
       if(idea) {
           this.setState(prev => ({
               ideas: prev.ideas.concat(idea),
           }))
       }
       console.log(this.state)
+      document.getElementById('new-idea').value = "";
   }
 
   deleteIdea(idea) {
@@ -53,12 +54,12 @@ addIdea(event) {
               <Form onSubmit={(event) => this.addIdea(event)}>
                 <FormBanner>
                   <h1>Create A Hotplot</h1>
-                  <h4>Step One: Make a list of ideas!</h4>
-                  <h5>Type an idea below and press 'enter' to add it to the list. Once you have added all your ideas, click "Continue"</h5>
+                  <h3>Step One: Make a list!</h3>
+                  <h4>Type an item below and press 'enter' to add it to the list. Once you have added all your items, click "Rank Items".</h4>
                 </FormBanner>
                   <FormGroup row>
                   < FormWrapper>
-                    <Input id='new-idea' type='text' class='input-idea' placeholder='Add a new idea...'/>
+                    <Input id='new-idea' type='text' class='input-idea' placeholder='Add a new item...'/>
                     </FormWrapper>
                   </FormGroup>
               </Form>   
@@ -70,7 +71,7 @@ addIdea(event) {
               </AlertWrapper>
 
               <CreateButton>
-              <a href="create2" class="btn" onClick={() => this.saveIdeas()}><span>Continue</span></a>
+              <a href="create2" class="btn" onClick={() => this.saveIdeas()}><span>Rank Items</span></a>
               </CreateButton>
           </div>
       )
@@ -128,7 +129,7 @@ flex-direction: row;
 flex-wrap: wrap;
 `
 
-const FormBanner = styled.div`
+export const FormBanner = styled.div`
 & h1 {
     margin-top: 1.5em;
     width: 100%;
@@ -160,6 +161,11 @@ const FormBanner = styled.div`
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+}
+
+& label {
+  font-size: 1.25em;
+  font-weight: 500;
 }
 `;
 

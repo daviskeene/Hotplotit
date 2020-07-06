@@ -11,7 +11,7 @@ export default class Footer extends Component {
           <footer>
             <Container>
               <Row>
-                <Col size="1">
+                <Col>
                   <p>
                     Copyright &copy; 2020 Davis Keene
                     <br></br>

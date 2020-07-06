@@ -43,7 +43,7 @@ footer {
   background-color: var(--main-color);
   position: absolute;
   min-height: 9vh;
-  padding: 3vh 0;
+  padding: 0 0;
   bottom: 0;
 }
 

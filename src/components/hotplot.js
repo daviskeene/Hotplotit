@@ -22,6 +22,8 @@ export default class HotPlot extends Component {
 
         const type = this.props.type;
         const isExample = type === "example";
+        const useNameLabels = this.props.useNameLabels;
+        console.log(useNameLabels);
 
         const COLORS = build_colors(
             [55, 120, 167],
@@ -32,26 +34,32 @@ export default class HotPlot extends Component {
         const backgroundColor = COLORS;
 
         const options = {
+                layout: {
+                    padding: {
+                        left: 100,
+                        right: 100,
+                        top: 50,
+                        bottom: 50
+                    }
+                },
                 beginAtZero: true,
                 aspectRatio: this.props.aspectRatio,
                 pointDot: true,
+                responsive: true,
                 maintainAspectRatio: false,
                   plugins: {
                       datalabels: {
-                          display: true,
+                          display: this.props.showLabels,
                           formatter: function(value, context) {
                             return context.chart.data.labels[context.dataIndex];
-                        }
+                            },
+                          align: 'top',
+                          font: {
+                              size: 20,
+                          },
+                          padding: 10
                       }
                   },
-                  tooltips: {
-                    callbacks: {
-                       label: function(tooltipItem, data) {
-                          var label = data.labels[tooltipItem.index];
-                          return label;
-                       }
-                    }
-                 },
                   legend: {
                       display: false
                   },
@@ -59,25 +67,28 @@ export default class HotPlot extends Component {
                     type: 'linear',
                     position: 'bottom',
                 }],
+                tooltips: (useNameLabels) ? {
+                    callbacks: {
+                       label: function(tooltipItem, data) {
+                        return (useNameLabels) ? data.labels[tooltipItem.index] : 0;
+                       }
+                    }
+                    } : {
+
+                },
                 scales: {
                     yAxes: [{ 
                       scaleLabel: {
                         display: true,
                         labelString: "Awesomeness",
-                        ticks: {
-                            min: 0, // minimum value
-                            max: 10 // maximum value
-                        }
+                        fontSize: 20
                       }
                     }],
                     xAxes: [{ 
                       scaleLabel: {
                         display: true,
                         labelString: "Easiness",
-                        ticks: {
-                            min: 0, // minimum value
-                            max: 10 // maximum value
-                        }
+                        fontSize: 20
                       }
                     }]
                   }
@@ -114,7 +125,9 @@ HotPlot.propTypes = {
     labels: PropTypes.array,
     data: PropTypes.array,
     type: PropTypes.string,
-    aspectRatio: PropTypes.number
+    aspectRatio: PropTypes.number,
+    showLabels: PropTypes.bool,
+    useNameLabels: PropTypes.bool
 }
 
 var build_colors = function(start, end, n) {

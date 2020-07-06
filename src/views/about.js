@@ -9,7 +9,6 @@ import HotPlot from '../components/hotplot'
 class About extends Component {
     state = {
 
-
     }
 
     render() {
@@ -20,13 +19,14 @@ class About extends Component {
             </Container>
 
             <Banner>
-                <h1>What is a Hot Plot?</h1>
-                <p>A hotplot is a way for organizations and people to prioritize their ideas.</p>
+                <h1>What's a HotPlot?</h1>
+                <p>A <i>HotPlot</i> is a way for organizations and people to prioritize their ideas.</p>
                 <p>Out of a list of ideas, each one is ranked by <b><i>awesomeness</i></b> and <b><i>difficulty</i></b>.</p>
                 <p>The most awesome and the least difficult ideas are prioritized first.</p>
             </Banner>
             
             <PlotWrapper>
+                <div class="chart-container">
                 <HotPlot type={'example'} data={[{
                     x: 1,
                     y: 2
@@ -36,10 +36,15 @@ class About extends Component {
                 }, {
                     x: 10,
                     y: 7
-                }]} labels={["I'm not awesome or easy!", "I'm awesome, but not easy!", "I'm awesome and easy!"]} aspectRatio={1}/>
+                }]} labels={["I'm not awesome or easy!", "I'm awesome, but not easy!", "I'm awesome and easy!"]}
+                 aspectRatio={1}
+                 showLabels={false}
+                 useNameLabels={true} />
+                </div>
             </PlotWrapper>
-                
-                <Footer />
+            <p>We should prioritize the tasks farthest from the origin.</p>
+            <p>In the above example, we would prioritize the farthest right idea first.</p>
+            <Footer />
             </span>
         )
     }
@@ -57,13 +62,16 @@ const Banner = styled.div`
 `
 
 const PlotWrapper = styled.div`
-    width: 100%;
-    height: 100%;
     margin-top: 2.5em;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
+
+    .chart-container {
+        width: 750px;
+        height: 250px;
+    }
 `
 
 export default About;

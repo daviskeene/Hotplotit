@@ -6,6 +6,7 @@ import Home from "./views/home"
 import About from "./views/about"
 import CreateList from "./views/formView"
 import CreatePlot from "./views/createPlot"
+import Results from "./views/results"
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             )}/>
             <Route exact={true} path='/create2' render={() => (
                 <CreatePlot />
+            )}/>
+            <Route exact={true} path='/results' render={() => (
+                <Results />
             )}/>
           </Switch>
       
