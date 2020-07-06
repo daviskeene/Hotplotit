@@ -46,7 +46,12 @@ addIdea(event) {
   }
 
   saveIdeas() {
-    localStorage.setItem('ideas', this.state.ideas)
+    if (this.state.ideas.length > 0) {
+      localStorage.setItem('ideas', this.state.ideas)
+      window.location.replace('/create2')
+    } else {
+      alert("Must include at least one list item!")
+    }
   }
 
   render() {
@@ -76,7 +81,7 @@ addIdea(event) {
               </AlertWrapper>
 
               <CreateButton>
-              <a href="create2" class="btn" onClick={() => this.saveIdeas()}><span>Rank Items</span></a>
+              <p class="btn" onClick={() => this.saveIdeas()}><span>Rank Items</span></p>
               </CreateButton>
           </div>
       )
