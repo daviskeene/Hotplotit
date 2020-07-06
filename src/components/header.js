@@ -23,7 +23,7 @@ const Navbar = (props) => {
             <a href="/">Home</a>
             <a href="about">About</a>
             <a href="/create">Create</a>
-            <a href="https://jellyfish.co">Jellyfish</a>
+            <a href="https://github.com/daviskeene/Hotplotit">Code</a>
           </NavLinks>
         </FlexContainer>
       </NavBar>
