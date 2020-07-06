@@ -49,7 +49,7 @@ class About extends Component {
             </PlotWrapper>
             <p>We should prioritize the tasks farthest from the origin.</p>
             <p>In the above example, we would prioritize the farthest right idea first.</p>
-            <Footer />
+            {/* <Footer /> */}
             </span>
         )
     }

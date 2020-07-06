@@ -13,7 +13,6 @@ export default class Footer extends Component {
               <Row>
                 <Col>
                   <p>
-                    Copyright &copy; 2020 Davis Keene
                     <br></br>
                     <a href="https://daviskeene.com">daviskeene.com</a>
                   </p>

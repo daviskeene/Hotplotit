@@ -17,7 +17,7 @@ class CreateList extends Component {
             <Header />
 
             <IdeaForm />
-            <Footer />
+            {/* <Footer /> */}
             </span>
         )
     }

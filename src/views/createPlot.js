@@ -159,7 +159,7 @@ export default class CreatePlot extends Component{
                     </Row>
                 </Container>
             </ContainerWrapper>
-            <Footer />
+            {/* <Footer /> */}
             </span>
         )
     }

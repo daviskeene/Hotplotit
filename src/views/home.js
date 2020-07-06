@@ -29,7 +29,7 @@ class Home extends Component {
                 <a href="create" class="btn"><span>Get Started!</span></a>
             </CreateButton>
 
-            <Footer />
+            {/* <Footer /> */}
             </span>
         )
     }
