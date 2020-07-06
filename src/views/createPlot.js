@@ -6,9 +6,11 @@ import {Banner} from '../views/home'
 import { Container, Row, Col } from 'react-grid-system';
 import styled from "styled-components";
 import HotPlot from "../components/hotplot"
+import { Helmet } from 'react-helmet'
 
 export default class CreatePlot extends Component{
 
+    // comment for vercel deploy
     state = {
         ideas: localStorage.getItem("ideas").split(","),
         data: [],
@@ -107,6 +109,10 @@ export default class CreatePlot extends Component{
     render() {
         return (
             <span>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Rank Items</title>
+            </Helmet>
             <Header />
             <ContainerWrapper>
             <FormBanner>

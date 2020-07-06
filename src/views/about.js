@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { Container } from 'react-grid-system';
 import styled from "styled-components";
+import {Helmet} from 'react-helmet';
 
 import HotPlot from '../components/hotplot'
 
@@ -14,6 +15,10 @@ class About extends Component {
     render() {
         return(
             <span>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About</title>
+            </Helmet>
             <Container>
             <Header />
             </Container>

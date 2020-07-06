@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { Container } from 'react-grid-system';
 import styled from "styled-components";
+import { Helmet } from 'react-helmet'
 
 
 class Home extends Component {
@@ -13,6 +14,10 @@ class Home extends Component {
     render() {
         return(
             <span>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Hotplotit</title>
+            </Helmet>
             <Container>
             <Header />
             </Container>

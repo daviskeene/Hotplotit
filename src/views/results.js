@@ -1,13 +1,10 @@
 import React , {Component} from 'react'
 import Header from '../components/header'
-import Footer from '../components/footer'
-import IdeaForm from '../components/form'
 import HotPlot from "../components/hotplot"
-import { Container } from 'react-grid-system';
 import styled from "styled-components";
 import {FormBanner} from "../components/form"
 import {CreateButton} from "../views/home"
-
+import {Helmet} from 'react-helmet';
 
 export default class Results extends Component {
 
@@ -37,6 +34,10 @@ export default class Results extends Component {
 
         return(
             <span>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Results</title>
+            </Helmet>
                 <Header />
                 <FormBanner>
                 <h1>Results</h1>

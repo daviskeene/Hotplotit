@@ -13,7 +13,8 @@ import {
   Row,
 } from 'reactstrap';
 
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {Helmet} from 'react-helmet';
 
 class IdeaForm extends Component {
 
@@ -51,6 +52,10 @@ addIdea(event) {
   render() {
       return (
           <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Create</title>
+            </Helmet>
               <Form onSubmit={(event) => this.addIdea(event)}>
                 <FormBanner>
                   <h1>Create A Hotplot</h1>
@@ -59,7 +64,7 @@ addIdea(event) {
                 </FormBanner>
                   <FormGroup row>
                   < FormWrapper>
-                    <Input id='new-idea' type='text' class='input-idea' placeholder='Add a new item...'/>
+                    <Input id='new-idea' type='text' class='input-idea' placeholder='Add a new item...' required/>
                     </FormWrapper>
                   </FormGroup>
               </Form>   
