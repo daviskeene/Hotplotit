@@ -42,9 +42,7 @@ export default class HotPlot extends Component {
                         bottom: 50
                     }
                 },
-                beginAtZero: true,
                 aspectRatio: this.props.aspectRatio,
-                pointDot: true,
                 responsive: true,
                 maintainAspectRatio: false,
                   plugins: {
@@ -60,12 +58,13 @@ export default class HotPlot extends Component {
                           padding: 10
                       }
                   },
-                  legend: {
-                      display: false
-                  },
-                  xAxes: [{
+                legend: {
+                    display: false
+                },
+                xAxes: [{
                     type: 'linear',
                     position: 'bottom',
+                    beginAtZero: true
                 }],
                 tooltips: (useNameLabels) ? {
                     callbacks: {
@@ -81,16 +80,24 @@ export default class HotPlot extends Component {
                       scaleLabel: {
                         display: true,
                         labelString: "Awesomeness",
-                        fontSize: 20
-                      }
+                        fontSize: 20,
+                      },
+                      ticks: {
+                        beginAtZero: true,
+                        max: 10
+                    }
                     }],
-                    xAxes: [{ 
-                      scaleLabel: {
-                        display: true,
-                        labelString: "Easiness",
-                        fontSize: 20
-                      }
-                    }]
+                        xAxes: [{ 
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Easiness",
+                            fontSize: 20,
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                        }]
                   }
               };
 
